@@ -85,7 +85,6 @@
 				11DBE979A0ABC8AA0013D3D3 /* Pods-MyWeather.debug.xcconfig */,
 				5DBA8D499E377F0D8571B5F1 /* Pods-MyWeather.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -97,6 +96,7 @@
 			buildConfigurationList = 11A9981C2A85313400E6502C /* Build configuration list for PBXNativeTarget "MyWeather" */;
 			buildPhases = (
 				7955425551FFAB956151C5D7 /* [CP] Check Pods Manifest.lock */,
+				11A9981F2A856F1000E6502C /* ShellScript */,
 				11A998042A85313300E6502C /* Sources */,
 				11A998052A85313300E6502C /* Frameworks */,
 				11A998062A85313300E6502C /* Resources */,
@@ -173,6 +173,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyWeather/Pods-MyWeather-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		11A9981F2A856F1000E6502C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
 		7955425551FFAB956151C5D7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
