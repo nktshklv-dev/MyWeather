@@ -12,6 +12,8 @@
 		11A998102A85313300E6502C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9980F2A85313300E6502C /* ViewController.swift */; };
 		11A998152A85313400E6502C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A998142A85313400E6502C /* Assets.xcassets */; };
 		11A998182A85313400E6502C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A998162A85313400E6502C /* LaunchScreen.storyboard */; };
+		11A998242A86E13C00E6502C /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A998232A86E13C00E6502C /* WeatherModel.swift */; };
+		11A998282A86F03D00E6502C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A998272A86F03D00E6502C /* APIManager.swift */; };
 		CFAECE0FC0F5A6DB1D70AD69 /* Pods_MyWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FD4E3FCFA758345075C697 /* Pods_MyWeather.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 		11A998142A85313400E6502C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11A998172A85313400E6502C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11A998192A85313400E6502C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11A998232A86E13C00E6502C /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		11A998272A86F03D00E6502C /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		11DBE979A0ABC8AA0013D3D3 /* Pods-MyWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWeather.debug.xcconfig"; path = "Target Support Files/Pods-MyWeather/Pods-MyWeather.debug.xcconfig"; sourceTree = "<group>"; };
 		27FD4E3FCFA758345075C697 /* Pods_MyWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBA8D499E377F0D8571B5F1 /* Pods-MyWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyWeather.release.xcconfig"; path = "Target Support Files/Pods-MyWeather/Pods-MyWeather.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,12 +67,47 @@
 			children = (
 				11A9980B2A85313300E6502C /* AppDelegate.swift */,
 				11A9980D2A85313300E6502C /* SceneDelegate.swift */,
-				11A9980F2A85313300E6502C /* ViewController.swift */,
+				11A998212A86D7EE00E6502C /* Controller */,
+				11A998222A86E12F00E6502C /* Model */,
 				11A998142A85313400E6502C /* Assets.xcassets */,
 				11A998162A85313400E6502C /* LaunchScreen.storyboard */,
 				11A998192A85313400E6502C /* Info.plist */,
 			);
 			path = MyWeather;
+			sourceTree = "<group>";
+		};
+		11A998212A86D7EE00E6502C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				11A9980F2A85313300E6502C /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		11A998222A86E12F00E6502C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11A998292A86F04300E6502C /* Networking */,
+				11A998262A86F02E00E6502C /* WeatherModel */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		11A998262A86F02E00E6502C /* WeatherModel */ = {
+			isa = PBXGroup;
+			children = (
+				11A998232A86E13C00E6502C /* WeatherModel.swift */,
+			);
+			path = WeatherModel;
+			sourceTree = "<group>";
+		};
+		11A998292A86F04300E6502C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				11A998272A86F03D00E6502C /* APIManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		CC2E8EB505382DA963AE4DF1 /* Frameworks */ = {
@@ -224,6 +263,8 @@
 			files = (
 				11A998102A85313300E6502C /* ViewController.swift in Sources */,
 				11A9980C2A85313300E6502C /* AppDelegate.swift in Sources */,
+				11A998282A86F03D00E6502C /* APIManager.swift in Sources */,
+				11A998242A86E13C00E6502C /* WeatherModel.swift in Sources */,
 				11A9980E2A85313300E6502C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
