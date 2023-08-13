@@ -11,7 +11,7 @@ import SnapKit
 class HomeViewController: UIViewController {
 
     var segmentedControl: UISegmentedControl!
-    var mainViewContainer: UIView!
+    var mainViewStack: UIStackView!
     var temperatureView: UIView!
     var clothesView: UIView!
     var hourlyWeatherView: UIView!
@@ -28,8 +28,12 @@ class HomeViewController: UIViewController {
     func setupViews() {
         setupSegmentedControl()
         
-        mainViewContainer = UIView()
-        temperatureView = UIView()
+        mainViewStack = UIStackView()
+        mainViewStack.axis = .vertical
+        self.view.addSubview(mainViewStack)
+        
+        temperatureView = LargeTemperatureView()
+        self.view.addSubview(temperatureView)
     }
     
     func setupSegmentedControl() {
@@ -54,6 +58,14 @@ class HomeViewController: UIViewController {
             make.top.equalToSuperview().offset(46)
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(16)
+        }
+        
+        temperatureView.snp.makeConstraints { make in
+            let width = self.view.frame.width * 0.9
+            make.width.equalTo(width)
+            make.height.equalTo(width / 1.377)
+            make.centerX.equalToSuperview()
+            make.top.equalTo(segmentedControl.snp.bottom).offset(20)
         }
     }
 

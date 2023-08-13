@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1181C2112A891F9F008B23A1 /* LargeTemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181C2102A891F9F008B23A1 /* LargeTemperatureView.swift */; };
+		1181C2132A89788E008B23A1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181C2122A89788D008B23A1 /* R.generated.swift */; };
 		11A9980C2A85313300E6502C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9980B2A85313300E6502C /* AppDelegate.swift */; };
 		11A9980E2A85313300E6502C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9980D2A85313300E6502C /* SceneDelegate.swift */; };
 		11A998102A85313300E6502C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9980F2A85313300E6502C /* HomeViewController.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		1181C2102A891F9F008B23A1 /* LargeTemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTemperatureView.swift; sourceTree = "<group>"; };
+		1181C2122A89788D008B23A1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		11A998082A85313300E6502C /* MyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A9980B2A85313300E6502C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11A9980D2A85313300E6502C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		11A997FF2A85313300E6502C = {
 			isa = PBXGroup;
 			children = (
+				1181C2122A89788D008B23A1 /* R.generated.swift */,
 				11A9980A2A85313300E6502C /* MyWeather */,
 				11A998092A85313300E6502C /* Products */,
 				F94E9A35F6D26D003613B962 /* Pods */,
@@ -339,6 +342,7 @@
 				11A998302A87FD6200E6502C /* SavedCitiesViewController.swift in Sources */,
 				11A998242A86E13C00E6502C /* WeatherModel.swift in Sources */,
 				11A9980E2A85313300E6502C /* SceneDelegate.swift in Sources */,
+				1181C2132A89788E008B23A1 /* R.generated.swift in Sources */,
 				11A9983A2A88011000E6502C /* SettingsViewController.swift in Sources */,
 				1181C2112A891F9F008B23A1 /* LargeTemperatureView.swift in Sources */,
 			);
