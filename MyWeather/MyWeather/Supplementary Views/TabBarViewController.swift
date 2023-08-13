@@ -20,7 +20,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let firstTab = ViewController()
+        let firstTab = HomeViewController()
         let tabOneItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
         firstTab.tabBarItem = tabOneItem
         
