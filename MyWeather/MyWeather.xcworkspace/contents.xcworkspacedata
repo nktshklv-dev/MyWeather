@@ -3,7 +3,7 @@
    version = "1.0">
    <Group
       location = "container:"
-      name = "Model">
+      name = "Settings Screen">
    </Group>
    <FileRef
       location = "group:MyWeather.xcodeproj">
