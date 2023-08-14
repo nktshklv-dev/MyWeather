@@ -9,23 +9,23 @@ import UIKit
 
 class LargeTemperatureView: UIView {
     
-    var backgroundConditionView: UIView!
-    var cityLabel: UILabel!
-    var temperatureLabel: UILabel!
-    var conditionIcon: UIImageView!
-    var conditionLabel: UILabel!
-    var highestTemperatureIcon: UIImageView!
-    var highestTemperatureLabel: UILabel!
-    var lowestTemperatureIcon: UIImageView!
-    var lowestTemperatureLabel: UILabel!
-    var separateLineView: UIImageView!
-    var humidityIcon: UIImageView!
-    var humidityLabel: UILabel!
-    var windSpeedIcon: UIImageView!
-    var windSpeedLabel: UILabel!
-    var precipationIcon: UIImageView!
-    var precipationLabel: UILabel!
-    var detailsButton: UIButton!
+   private var backgroundConditionView: UIView!
+   private var cityLabel: UILabel!
+   private var temperatureLabel: UILabel!
+   private var conditionIcon: UIImageView!
+   private var conditionLabel: UILabel!
+   private var highestTemperatureIcon: UIImageView!
+   private var highestTemperatureLabel: UILabel!
+   private var lowestTemperatureIcon: UIImageView!
+   private var lowestTemperatureLabel: UILabel!
+   private var separateLineView: UIImageView!
+   private var humidityIcon: UIImageView!
+   private var humidityLabel: UILabel!
+   private var windSpeedIcon: UIImageView!
+   private var windSpeedLabel: UILabel!
+   private var precipationIcon: UIImageView!
+   private var precipationLabel: UILabel!
+   private var detailsButton: UIButton!
     
     
     override init(frame: CGRect) {
@@ -38,7 +38,7 @@ class LargeTemperatureView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupViews() {
+    private func setupViews() {
         
         backgroundConditionView = UIView()
         backgroundConditionView.layer.cornerRadius = 24
@@ -129,8 +129,7 @@ class LargeTemperatureView: UIView {
         precipationLabel.textColor = R.color.labelGray()
         self.addSubview(precipationLabel)
     }
-    
-    func setupConstraints() {
+    private func setupConstraints() {
         self.backgroundConditionView.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.left.equalToSuperview()
