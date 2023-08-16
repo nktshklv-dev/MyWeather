@@ -10,6 +10,8 @@ import SnapKit
 
 class HomeViewController: UIViewController {
 
+    var viewModel: HomeViewControllerViewModel!
+    
     var segmentedControl: UISegmentedControl!
     var mainViewStack: UIStackView!
     var temperatureView: UIView!
@@ -22,7 +24,12 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         setupConstraints()
-        
+        setupViewModel()
+    }
+    
+    func setupViewModel() {
+        self.viewModel = HomeViewControllerViewModel()
+        viewModel.viewController = self
     }
 }
 

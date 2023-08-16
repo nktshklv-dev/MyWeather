@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import UIKit
+
+class HomeViewControllerViewModel {
+    
+    weak var viewController: HomeViewController!
+}
