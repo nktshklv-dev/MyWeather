@@ -50,7 +50,7 @@ struct Condition: Codable {
 }
 
 struct Forecast: Codable {
-    var forecastday: Forecastday
+    var forecastday: [Forecastday]
 }
 
 struct Forecastday: Codable {
