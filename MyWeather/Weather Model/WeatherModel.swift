@@ -10,6 +10,7 @@ import Foundation
 struct WeatherModel: Codable {
     var location: Location
     var current: Current
+    var forecast: Forecast
 }
 
 struct Location: Codable {
@@ -47,3 +48,17 @@ struct Current: Codable {
 struct Condition: Codable {
     var text: String
 }
+
+struct Forecast: Codable {
+    var forecastday: Forecastday
+}
+
+struct Forecastday: Codable {
+    var day: Day
+}
+
+struct Day: Codable {
+    var maxtemp_c: Double
+    var mintemp_c: Double
+}
+
