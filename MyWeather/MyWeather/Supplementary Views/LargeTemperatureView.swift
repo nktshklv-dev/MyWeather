@@ -37,7 +37,7 @@ class LargeTemperatureView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    //MARK: - Views Setup
     private func setupViews() {
         
         backgroundConditionView = UIView()
@@ -46,7 +46,7 @@ class LargeTemperatureView: UIView {
         self.addSubview(backgroundConditionView)
         
         cityLabel = UILabel()
-        cityLabel.text = "Moscow"
+        cityLabel.text = ""
         cityLabel.textColor = .white
         cityLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
         cityLabel.layer.borderColor = UIColor(ciColor: .white).cgColor
@@ -67,7 +67,7 @@ class LargeTemperatureView: UIView {
         self.addSubview(conditionLabel)
         
         temperatureLabel = UILabel()
-        temperatureLabel.text = "20°C"
+        temperatureLabel.text = ""
         temperatureLabel.font = UIFont.systemFont(ofSize: 80, weight: .light)
         temperatureLabel.textColor = .white
         self.addSubview(temperatureLabel)
@@ -78,7 +78,7 @@ class LargeTemperatureView: UIView {
         self.addSubview(highestTemperatureIcon)
         
         highestTemperatureLabel = UILabel()
-        highestTemperatureLabel.text = "24°"
+        highestTemperatureLabel.text = ""
         highestTemperatureLabel.font = UIFont.systemFont(ofSize: 15, weight: .light)
         self.addSubview(highestTemperatureLabel)
         
@@ -88,7 +88,7 @@ class LargeTemperatureView: UIView {
         self.addSubview(lowestTemperatureIcon)
         
         lowestTemperatureLabel = UILabel()
-        lowestTemperatureLabel.text = "12°"
+        lowestTemperatureLabel.text = ""
         lowestTemperatureLabel.font = UIFont.systemFont(ofSize: 15, weight: .light)
         self.addSubview(lowestTemperatureLabel)
         
@@ -218,6 +218,27 @@ class LargeTemperatureView: UIView {
             make.top.equalTo(humidityIcon)
             make.right.equalTo(precipationLabel.snp.left).offset(-4)
         }
+    }
+    
+    func setTemperature(current: Double, max: Double, min: Double) {
+        self.temperatureLabel.text = Int(current).description + "°C"
+        self.highestTemperatureLabel.text = Int(max).description + "°"
+        self.lowestTemperatureLabel.text = Int(min).description + "°"
+    }
+    
+    func setCityName(to name: String) {
+        self.cityLabel.text = name
+    }
+    
+    func setWindSpeed(to speed: Double) {
+        self.windSpeedLabel.text = (speed / 3.6).description + " m/s"
+    }
+    
+    func setHumidity(to humidity: Int) {
+        self.humidityLabel.text = humidity.description + " %"
+    }
+    func setPrecipation(to precipation: Double) {
+        self.precipationLabel.text = precipation.description + " mm"
     }
 }
 

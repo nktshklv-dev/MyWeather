@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     
     var segmentedControl: UISegmentedControl!
     var mainViewStack: UIStackView!
-    var temperatureView: UIView!
+    var temperatureView: LargeTemperatureView!
     var clothesView: UIView!
     var hourlyWeatherView: UIView!
     var dailyContainerView: UIView!
@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
     func setupViewModel() {
         self.viewModel = HomeViewControllerViewModel()
         viewModel.viewController = self
-        viewModel.updateWeatherData()
+        viewModel.updateUI()
     }
 }
 
