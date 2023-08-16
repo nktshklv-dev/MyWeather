@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
     func setupViewModel() {
         self.viewModel = HomeViewControllerViewModel()
         viewModel.viewController = self
+        viewModel.updateWeatherData()
     }
 }
 
