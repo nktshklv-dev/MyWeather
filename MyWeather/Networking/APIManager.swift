@@ -39,7 +39,7 @@ class WeatherManager {
         let urlString = "http://api.weatherapi.com/v1/current.json?key=\(apiKey)&q=\(cityName)"
         var weatherData: Data? = nil
         do {
-            guard let url = URL(string: apiKey) else {return nil}
+            guard let url = URL(string: urlString) else {return nil}
             weatherData = try Data(contentsOf: url)
         } catch {
             print(error)
