@@ -14,7 +14,6 @@ class HomeViewControllerViewModel {
     var manager = WeatherManager()
     let cityName = "Berlin"
 
-    
     func updateUI() {
         updateCityLabel()
         updateTemperatureView()
@@ -34,6 +33,7 @@ class HomeViewControllerViewModel {
         }
     }
     
+// MARK: LargeTemperatureView UI
     private func updateTemperatureView() {
         Task {
             do {
@@ -44,7 +44,6 @@ class HomeViewControllerViewModel {
             }
         }
     }
-    
     private func updateWindSpeedLabel() {
         Task {
             do {
@@ -55,7 +54,6 @@ class HomeViewControllerViewModel {
             }
         }
     }
-    
     private func updateHumidityLabel() {
         Task {
             do {
@@ -66,7 +64,6 @@ class HomeViewControllerViewModel {
             }
         }
     }
-    
     private func updatePrecipationLabel() {
         Task {
             do {

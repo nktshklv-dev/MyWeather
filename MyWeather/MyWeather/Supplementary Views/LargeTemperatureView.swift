@@ -8,10 +8,13 @@
 import UIKit
 
 class LargeTemperatureView: UIView {
-    
+//TODO: gradient animation for updating weather info in views (skeleton view)
+//TODO: update according to conditions / time
    private var backgroundConditionView: UIView!
+//TODO: think smth about changing the size of label with the city name length 
    private var cityLabel: UILabel!
    private var temperatureLabel: UILabel!
+//TODO: conditionIcon and conditionLabel update with weather calls
    private var conditionIcon: UIImageView!
    private var conditionLabel: UILabel!
    private var highestTemperatureIcon: UIImageView!
@@ -25,6 +28,7 @@ class LargeTemperatureView: UIView {
    private var windSpeedLabel: UILabel!
    private var precipationIcon: UIImageView!
    private var precipationLabel: UILabel!
+//TODO: set up details button (think smth about fullscreen detailView)
    private var detailsButton: UIButton!
     
     
@@ -37,7 +41,8 @@ class LargeTemperatureView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    //MARK: - Views Setup
+    
+//MARK: - Views Setup
     private func setupViews() {
         
         backgroundConditionView = UIView()
@@ -129,6 +134,7 @@ class LargeTemperatureView: UIView {
         precipationLabel.textColor = R.color.labelGray()
         self.addSubview(precipationLabel)
     }
+//MARK: Setup Constraints
     private func setupConstraints() {
         self.backgroundConditionView.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -219,6 +225,8 @@ class LargeTemperatureView: UIView {
             make.right.equalTo(precipationLabel.snp.left).offset(-4)
         }
     }
+    
+//MARK: UI updating functions
     
     func setTemperature(current: Double, max: Double, min: Double) {
         self.temperatureLabel.text = Int(current).description + "°C"

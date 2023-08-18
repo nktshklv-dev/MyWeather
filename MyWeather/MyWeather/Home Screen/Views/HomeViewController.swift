@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
         setupViewModel()
     }
     
-    func setupViewModel() {
+    private func setupViewModel() {
         self.viewModel = HomeViewControllerViewModel()
         viewModel.viewController = self
         viewModel.updateUI()

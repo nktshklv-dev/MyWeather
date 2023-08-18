@@ -40,7 +40,7 @@ extension HomeViewController {
         }
     }
     
-    func setupSegmentedControl() {
+    private func setupSegmentedControl() {
         self.view.backgroundColor = .black
         
         segmentedControl = UISegmentedControl(items: ["HOME", "5 DAYS AHEAD"])
