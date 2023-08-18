@@ -231,7 +231,7 @@ class LargeTemperatureView: UIView {
     }
     
     func setWindSpeed(to speed: Double) {
-        self.windSpeedLabel.text = (speed / 3.6).description + " m/s"
+        self.windSpeedLabel.text = round(((speed / 3.6) * 10.0) / 10.0).description + " m/s"
     }
     
     func setHumidity(to humidity: Int) {
