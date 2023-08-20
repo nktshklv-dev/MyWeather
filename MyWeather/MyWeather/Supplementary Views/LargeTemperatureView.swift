@@ -51,7 +51,7 @@ class LargeTemperatureView: UIView {
         self.addSubview(backgroundConditionView)
         
         cityLabel = UILabel()
-        cityLabel.text = ""
+        cityLabel.text = "---"
         cityLabel.textColor = .white
         cityLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
         cityLabel.layer.borderColor = UIColor(ciColor: .white).cgColor
@@ -67,12 +67,12 @@ class LargeTemperatureView: UIView {
         self.addSubview(conditionIcon)
         
         conditionLabel = UILabel()
-        conditionLabel.text = "Clear"
+        conditionLabel.text = "---"
         conditionLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
         self.addSubview(conditionLabel)
         
         temperatureLabel = UILabel()
-        temperatureLabel.text = ""
+        temperatureLabel.text = "-°C"
         temperatureLabel.font = UIFont.systemFont(ofSize: 80, weight: .light)
         temperatureLabel.textColor = .white
         self.addSubview(temperatureLabel)
@@ -83,7 +83,7 @@ class LargeTemperatureView: UIView {
         self.addSubview(highestTemperatureIcon)
         
         highestTemperatureLabel = UILabel()
-        highestTemperatureLabel.text = ""
+        highestTemperatureLabel.text = "---"
         highestTemperatureLabel.font = UIFont.systemFont(ofSize: 15, weight: .light)
         self.addSubview(highestTemperatureLabel)
         
@@ -93,7 +93,7 @@ class LargeTemperatureView: UIView {
         self.addSubview(lowestTemperatureIcon)
         
         lowestTemperatureLabel = UILabel()
-        lowestTemperatureLabel.text = ""
+        lowestTemperatureLabel.text = "---"
         lowestTemperatureLabel.font = UIFont.systemFont(ofSize: 15, weight: .light)
         self.addSubview(lowestTemperatureLabel)
         
@@ -107,7 +107,7 @@ class LargeTemperatureView: UIView {
         self.addSubview(humidityIcon)
         
         humidityLabel = UILabel()
-        humidityLabel.text = "30%"
+        humidityLabel.text = "---"
         humidityLabel.font = UIFont.systemFont(ofSize: 17, weight: .light)
         humidityLabel.textColor = R.color.labelGray()
         self.addSubview(humidityLabel)
@@ -118,7 +118,7 @@ class LargeTemperatureView: UIView {
         self.addSubview(windSpeedIcon)
         
         windSpeedLabel = UILabel()
-        windSpeedLabel.text = "4 m/s"
+        windSpeedLabel.text = "--- m/s"
         windSpeedLabel.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         windSpeedLabel.textColor = R.color.labelGray()
         self.addSubview(windSpeedLabel)
@@ -129,7 +129,7 @@ class LargeTemperatureView: UIView {
         self.addSubview(precipationIcon)
         
         precipationLabel = UILabel()
-        precipationLabel.text = "0 mm"
+        precipationLabel.text = "--- mm"
         precipationLabel.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         precipationLabel.textColor = R.color.labelGray()
         self.addSubview(precipationLabel)
