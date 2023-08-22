@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     var segmentedControl: UISegmentedControl!
     var mainViewStack: UIStackView!
     var temperatureView: LargeTemperatureView!
-    var clothesView: UIView!
+    var clothesView: ClothesView!
     var hourlyWeatherView: UIView!
     var dailyContainerView: UIView!
     var dailyCollectionView: UICollectionView!

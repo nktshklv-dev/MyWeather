@@ -19,6 +19,9 @@ extension HomeViewController {
         
         temperatureView = LargeTemperatureView()
         self.view.addSubview(temperatureView)
+        
+        clothesView = ClothesView()
+        self.view.addSubview(clothesView)
     }
     
     
@@ -37,6 +40,14 @@ extension HomeViewController {
             make.height.equalTo(width / 1.377)
             make.centerX.equalToSuperview()
             make.top.equalTo(segmentedControl.snp.bottom).offset(20)
+        }
+        
+        clothesView.snp.makeConstraints { make in
+            let width = self.view.frame.width * 0.9
+            make.width.equalTo(width)
+            make.height.equalTo(width / 2.542253521126761)
+            make.centerX.equalToSuperview()
+            make.top.equalTo(temperatureView.snp.bottom).offset(16)
         }
     }
     

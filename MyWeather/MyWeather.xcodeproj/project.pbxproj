@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1165A6302A952C00009192BD /* ClothesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1165A62F2A952C00009192BD /* ClothesView.swift */; };
 		1181C2112A891F9F008B23A1 /* LargeTemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181C2102A891F9F008B23A1 /* LargeTemperatureView.swift */; };
 		1181C2132A89788E008B23A1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181C2122A89788D008B23A1 /* R.generated.swift */; };
 		1181C2152A898C0D008B23A1 /* HomeViewController+SetupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181C2142A898C0D008B23A1 /* HomeViewController+SetupViews.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1165A62F2A952C00009192BD /* ClothesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesView.swift; sourceTree = "<group>"; };
 		1181C2102A891F9F008B23A1 /* LargeTemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTemperatureView.swift; sourceTree = "<group>"; };
 		1181C2122A89788D008B23A1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		1181C2142A898C0D008B23A1 /* HomeViewController+SetupViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+SetupViews.swift"; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			children = (
 				11A998332A87FF1300E6502C /* TabBarViewController.swift */,
 				1181C2102A891F9F008B23A1 /* LargeTemperatureView.swift */,
+				1165A62F2A952C00009192BD /* ClothesView.swift */,
 			);
 			path = "Supplementary Views";
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				11A9980E2A85313300E6502C /* SceneDelegate.swift in Sources */,
 				1181C2152A898C0D008B23A1 /* HomeViewController+SetupViews.swift in Sources */,
 				1181C2132A89788E008B23A1 /* R.generated.swift in Sources */,
+				1165A6302A952C00009192BD /* ClothesView.swift in Sources */,
 				11A9983A2A88011000E6502C /* SettingsViewController.swift in Sources */,
 				1181C2112A891F9F008B23A1 /* LargeTemperatureView.swift in Sources */,
 			);
