@@ -39,7 +39,7 @@ class ClothesView: UIView {
         titleLabel.text = "Clothes accodring to the weather"
         titleLabel.textColor = .white
         titleLabel.textAlignment = .left
-        titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+        titleLabel.font = UIFont.systemFont(ofSize: 19, weight: .medium)
         self.addSubview(titleLabel)
     }
     
@@ -55,6 +55,7 @@ class ClothesView: UIView {
             make.height.equalTo(20)
             make.top.equalToSuperview().offset(24)
             make.left.equalToSuperview().offset(24)
+            make.right.equalToSuperview().offset(-24)
         }
     }
    

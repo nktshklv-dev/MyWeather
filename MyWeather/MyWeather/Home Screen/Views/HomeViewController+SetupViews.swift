@@ -22,6 +22,9 @@ extension HomeViewController {
         
         clothesView = ClothesView()
         self.view.addSubview(clothesView)
+        
+        hourlyWeatherView = HourlyWeatherView()
+        self.view.addSubview(hourlyWeatherView)
     }
     
     
@@ -48,6 +51,14 @@ extension HomeViewController {
             make.height.equalTo(width / 2.542253521126761)
             make.centerX.equalToSuperview()
             make.top.equalTo(temperatureView.snp.bottom).offset(16)
+        }
+        
+        hourlyWeatherView.snp.makeConstraints { make in
+            let width = self.view.frame.width * 0.9
+            make.width.equalTo(width)
+            make.height.equalTo(width / 1.787128712871287)
+            make.centerX.equalToSuperview()
+            make.top.equalTo(clothesView.snp.bottom).offset(16)
         }
     }
     

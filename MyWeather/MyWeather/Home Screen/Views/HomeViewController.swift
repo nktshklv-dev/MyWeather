@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
     var mainViewStack: UIStackView!
     var temperatureView: LargeTemperatureView!
     var clothesView: ClothesView!
-    var hourlyWeatherView: UIView!
+    var hourlyWeatherView: HourlyWeatherView!
     var dailyContainerView: UIView!
     var dailyCollectionView: UICollectionView!
     
