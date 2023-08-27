@@ -36,17 +36,16 @@ class HourlyWeatherView: UIView {
         self.addSubview(titleLabel)
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 50, height: 50)
+        layout.itemSize = CGSize(width: 64, height: 116)
         layout.scrollDirection = .horizontal
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         self.addSubview(collectionView)
         collectionView.dataSource = self
-        collectionView.backgroundColor = .blue
+        collectionView.register(HourlyTemperatureCollectionViewCell.self, forCellWithReuseIdentifier: HourlyTemperatureCollectionViewCell.reuseIdentifier)
+        collectionView.backgroundColor = R.color.dark()
+        collectionView.layer.cornerRadius = 8
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-      
-        
-        
-        
     }
     
     private func setupConstraints() {
@@ -73,12 +72,11 @@ class HourlyWeatherView: UIView {
 }
 extension HourlyWeatherView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = UICollectionViewCell()
-        cell.backgroundColor = .red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HourlyTemperatureCollectionViewCell.reuseIdentifier, for: indexPath)
         return cell
     }
 }
