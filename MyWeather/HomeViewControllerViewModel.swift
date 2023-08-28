@@ -20,6 +20,7 @@ class HomeViewControllerViewModel {
         updateWindSpeedLabel()
         updateHumidityLabel()
         updatePrecipationLabel()
+        setHourlyTemperatureData()
     }
     
     private func updateCityLabel() {
@@ -69,6 +70,18 @@ class HomeViewControllerViewModel {
             do {
                 let weather = try await manager.getWeather(cityName: cityName)
                 await viewController.temperatureView.setPrecipation(to: weather.current.precip_mm)
+            } catch {
+                print(error)
+            }
+        }
+    }
+    private func setHourlyTemperatureData() {
+        Task {
+            do {
+                let weather = try await manager.getWeather(cityName: cityName)
+                print(weather.forecast.forecastday.first?.hour)
+                await viewController.hourlyWeatherView.setHourlyData(data: weather.forecast.forecastday.first?.hour)
+                await viewController.hourlyWeatherView.updateCollectionView()
             } catch {
                 print(error)
             }

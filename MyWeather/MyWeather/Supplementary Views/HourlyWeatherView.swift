@@ -12,6 +12,8 @@ class HourlyWeatherView: UIView {
     private var backgorundView: UIView!
     private var titleLabel: UILabel!
     private var collectionView: UICollectionView!
+    private var hourlyWeatherData = [Hour]()
+    private var currentHourlyWeatherData = [Hour]()
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -21,6 +23,18 @@ class HourlyWeatherView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setHourlyData(data: [Hour]?) {
+        guard let data = data else {return}
+        self.hourlyWeatherData = data
+        guard let time = self.hourlyWeatherData.first?.time else {return}
+        let x = time.dropFirst(11)
+        print(x)
+    }
+    
+    func updateCollectionView() {
+        self.collectionView.reloadData()
     }
     
     private func setupViews() {
@@ -72,12 +86,32 @@ class HourlyWeatherView: UIView {
 }
 extension HourlyWeatherView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        for data in hourlyWeatherData{
+            guard let hour = Int(data.time.dropFirst(11).dropLast(3)) else {return 0}
+            print(hour)
+            if checkDate(hour: hour) {
+                currentHourlyWeatherData.append(data)
+            }
+        }
+        return currentHourlyWeatherData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HourlyTemperatureCollectionViewCell.reuseIdentifier, for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HourlyTemperatureCollectionViewCell.reuseIdentifier, for: indexPath) as? HourlyTemperatureCollectionViewCell else {return UICollectionViewCell()}
+        cell.setData(data: currentHourlyWeatherData[indexPath.row])
         return cell
+    }
+    
+    func checkDate(hour: Int) -> Bool{
+        let date = Date()
+        let calendar = Calendar.current
+        let time = calendar.component(.hour, from: date)
+        
+        if time <= hour {
+            return true
+        } else {
+            return false
+        }
     }
 }
 

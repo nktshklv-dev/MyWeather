@@ -55,10 +55,17 @@ struct Forecast: Codable {
 
 struct Forecastday: Codable {
     var day: Day
+    var hour: [Hour]
 }
 
 struct Day: Codable {
     var maxtemp_c: Double
     var mintemp_c: Double
+}
+
+struct Hour: Codable {
+    var time: String
+    var temp_c: Double
+    var condition: Condition
 }
 

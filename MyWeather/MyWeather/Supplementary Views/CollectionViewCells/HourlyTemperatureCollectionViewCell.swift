@@ -67,4 +67,10 @@ class HourlyTemperatureCollectionViewCell: UICollectionViewCell {
     }
     
     
+    func setData(data: Hour) {
+        self.currentTimeLabel.text = String(data.time.dropFirst(11))
+        self.currentTemperatureLabel.text = Int(data.temp_c).description + "°C"
+    }
+    
+    
 }
